@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: druid
+
+mybatis:
+  config-location: classpath:top/heitiantian/config/mybatis/mybatisConfig.xml  #(用配置类代替--MybatisConfig类)
+  mapper-locations: classpath*:top/heitiantian/**/model/mapper/*.xml
+
+#通用mapper配置
+mapper:
+  mappers: top.heitiantian.config.base.BaseMappers
+  identity: MYSQL
+
+logging:
+  level:
+   top.heitiantian: debug
+
+
+
+
